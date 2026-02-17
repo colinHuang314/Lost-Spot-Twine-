@@ -70,21 +70,21 @@ Spot ran out the door!
 
 ]
 
-</tw-passagedata><tw-passagedata pid="6" name="Phone" tags="" position="1550,425" size="100,100">You scroll untill you start to get hungry, so you go to make some food in the [[kitchen-&gt;Kitchen]].
+</tw-passagedata><tw-passagedata pid="6" name="Phone" tags="" position="1550,425" size="100,100">You scroll until you start to get hungry, so you go to make some food in the [[kitchen-&gt;Kitchen]].
 
 (set: $energy to $energy + 4)
 </tw-passagedata><tw-passagedata pid="7" name="First Floor" tags="" position="1575,150" size="100,100">
-(if:(history: where its name contains &quot;First Floor&quot;)&#39;s length &lt; 1)[You are still panting as to enter your house. You really want to rest you legs by laying on the [[couch-&gt;Couch]], but you also need to do your [[homework-&gt;Room]]. Your dog //Spot// is in the [[kitchen-&gt;Kitchen]].]
+(if:(history: where its name contains &quot;First Floor&quot;)&#39;s length &lt; 1)[You are still panting as you enter your house. You really want to rest your legs by lying on the [[couch-&gt;Couch]], but you also need to do your [[homework-&gt;Room]]. Your dog //Spot// is in the [[kitchen-&gt;Kitchen]].]
 (else:)[You are on the first floor. You could go to the [[couch-&gt;Couch]], but you also need to do your [[homework-&gt;Room]]. Go to the [[kitchen-&gt;Kitchen]]. (if:$spot_gone is true)[Go out the front [[door-&gt;Out The Door]].]]
 
 (if:$energy &lt; 4)[**You are very tired.**]
 (else-if:$energy &lt; 7)[**You are tired.**]
-(else:)[**You are well rested.**]</tw-passagedata><tw-passagedata pid="8" name="Run To Kitchen" tags="" position="1875,300" size="100,100">You see the open front door and look to the kitchen when Spot was sitting. Nothing. Gone. Spot must have gotten [[outside-&gt;Out The Door]].
+(else:)[**You are well rested.**]</tw-passagedata><tw-passagedata pid="8" name="Run To Kitchen" tags="" position="1875,300" size="100,100">You see the open front door and look to the kitchen where Spot was sitting. Nothing. Gone. Spot must have gotten [[outside-&gt;Out The Door]].
 </tw-passagedata><tw-passagedata pid="9" name="Yell" tags="" position="1150,300" size="100,100">&quot;Spot!&quot;, you yell out the door. 
 
 &quot;Is something wrong honey?&quot; your Mom asks from the kitchen.
 
-&quot;No! Everythings fine Mom!
+&quot;No! Everythings fine, Mom!
 
 &quot;Ok, just remember, you have a very strict homework time, so go to your room!&quot;
 
@@ -98,7 +98,7 @@ Spot ran out the door!
 (set: $sus to $sus + 1)
 </tw-passagedata><tw-passagedata pid="11" name="Front Of House" tags="" position="1350,1925" size="100,100">(if:visits &lt;= 1)[
 You sprint out the door to try and catch Spot, but he is nowhere in sight. 
-(if:(history: where its name contains &quot;Yell&quot;)&#39;s length &lt; 1)[You must find Spot quick! You are not supposed to be out of the house! Mom makes a big point to stay in my room during homework time.]
+(if:(history: where its name contains &quot;Yell&quot;)&#39;s length &lt; 1)[You must find Spot quickly! You are not supposed to be out of the house! Mom makes a big point to stay in my room during homework time.]
 
 You could go left towards the [[school-&gt;School]], or right towards the [[restaurant-&gt;Restaurant]].
 
@@ -133,7 +133,7 @@ Check out the tube [[slide-&gt;Slide Normal]]. ]
 Check under the playground [[structure-&gt;Structure Sus]].]
 (else:)[Jump on the [[boucy bridge-&gt;Bouncy Bridge End]].]
 (if: visits &gt;1)[[[back-&gt;School]]]
-</tw-passagedata><tw-passagedata pid="15" name="Store" tags="" position="675,1100" size="100,100">You go into the store. You don&#39;t go here often, usually your Mom does the shopping.
+</tw-passagedata><tw-passagedata pid="15" name="Store" tags="" position="675,1100" size="100,100">You go into the store. You don&#39;t go here often; usually, your Mom does the shopping.
 (if: $sus &gt;= 8)[
 All the shelves are freshly stocked. And all the produce looks perfectly fresh!
 ]
@@ -148,14 +148,14 @@ Run to the [[school-&gt;School]].
 (if:$sus &lt;=9 )[Nothing has changed. 
 [[Leave quietly!-&gt;Front Of House]]]
 
-(else-if: $sus &lt;= 16)[You look in the kitchen to see it Spot has returned, but as you turn the corner, your Mom walks through the hallway toward you. &quot;Hey! You were supposed to be in your room! You are grounded!&quot;
+(else-if: $sus &lt;= 16)[You look in the kitchen to see if Spot has returned, but as you turn the corner, your Mom walks through the hallway toward you. &quot;Hey! You were supposed to be in your room! You are grounded!&quot;
 
 [[&quot;But I was trying to find Spot!&quot;-&gt;Reason]]
 [[//Say nothing and go to your room//-&gt;Say Nothing]]
 ]
 
 (else:)[Your Mom is peering through the blinds and gasps audibly when you enter.
-&quot;Oh goodness you scared me!&quot;
+&quot;Oh goodness, you scared me!&quot;
 
 [[&quot;What were you doing?&quot;-&gt;Question Mom]]
 ]</tw-passagedata><tw-passagedata pid="17" name="Waiter" tags="" position="2050,1900" size="100,100">(if: visits &lt;=1)[(set: $sus to $sus + 2)]
@@ -215,10 +215,10 @@ Keep going, [[past the hospital-&gt;Concrete]].
 Go back to the [[park-&gt;Park]].
 
 (if: visits &lt;=1)[(set: $sus to $sus + 1)]</tw-passagedata><tw-passagedata pid="21" name="Aisles" tags="" position="550,1225" size="100,100">(if: visits &lt;=1)[(set: $sus to $sus + 2)]
-You scan a few of aisles in the store, not seeing much yet.
+You scan a few aisles in the store, not seeing much yet.
 
 (if: $sus &lt;= 9)[
-Check the [[snack section-&gt;Snack Section Normal]]. Maybe get some snacks while your there!
+Check the [[snack section-&gt;Snack Section Normal]]. Maybe get some snacks while you're there!
 Look in the [[frozen aisle-&gt;Frozen Aisle Normal]]. 
 ]
 (else-if: $sus &lt;= 15)[
@@ -263,32 +263,32 @@ Hi, I lost my dog. Do you think he could be in here?
 
 [[**Game Over**-&gt;The End]]</tw-passagedata><tw-passagedata pid="29" name="Say Nothing" tags="" position="1175,2075" size="100,100">You walk to your room, defeated.
 
-[[**Game Over**-&gt;The End]]</tw-passagedata><tw-passagedata pid="30" name="Swing Sus" tags="" position="800,2050" size="100,100">While you play on the swings, something weird catches your eye. Straight ahead, past the store is a strange grey color. It makes up a large figure in the shape of a cube.
+[[**Game Over**-&gt;The End]]</tw-passagedata><tw-passagedata pid="30" name="Swing Sus" tags="" position="800,2050" size="100,100">While you play on the swings, something weird catches your eye. Straight ahead, past the store, is a strange grey color. It makes up a large figure in the shape of a cube.
 
-[[To playground-&gt;Playground]]</tw-passagedata><tw-passagedata pid="31" name="Structure Sus" tags="" position="825,1975" size="100,100">You get on your knees and search under the playground. You have to dig a little tanbark out to fit under the platform. You look left, then look right, but there are no signs of Spot. As you crawl out, our knee scrapes something hard. Its concrete.
+[[To playground-&gt;Playground]]</tw-passagedata><tw-passagedata pid="31" name="Structure Sus" tags="" position="825,1975" size="100,100">You get on your knees and search under the playground. You have to dig a little tanbark out to fit under the platform. You look left, then look right, but there are no signs of Spot. As you crawl out, your knee scrapes something hard. It's concrete.
 
-[[To playground-&gt;Playground]]</tw-passagedata><tw-passagedata pid="32" name="Bouncy Bridge End" tags="" position="575,2075" size="100,100">You are jumping on the boucy bridge when suddenly you are flung 100 feet into the air. You scream so loud the whole town could hear you. You look down in fear, thinking this is the [[end-&gt;Ending 1]]. 
-</tw-passagedata><tw-passagedata pid="33" name="Ending 1" tags="" position="575,2200" size="100,100">Then you notice that there are no buildings, trees, nothing beyond your town. 
+[[To playground-&gt;Playground]]</tw-passagedata><tw-passagedata pid="32" name="Bouncy Bridge End" tags="" position="575,2075" size="100,100">You are jumping on the bouncy bridge when suddenly you are flung 100 feet into the air. You scream so loud the whole town could hear you. You look down in fear, thinking this is the [[end-&gt;Ending 1]]. 
+</tw-passagedata><tw-passagedata pid="33" name="Ending 1" tags="" position="575,2200" size="100,100">Then you notice that there are no buildings, trees, or anything beyond your town. 
 Right before you hit the ground, you awaken with a gasp.
 
-You were in a simulation and the bouncy bridge glitched out, sending you flying.
+You were in a simulation, and the bouncy bridge glitched out, sending you flying.
 
 [[//**You escaped the simulation**//-&gt;The End]]</tw-passagedata><tw-passagedata pid="34" name="The End" tags="" position="1325,2950" size="100,100">Congratulations $name! You finished the game!
 
 //The End//</tw-passagedata><tw-passagedata pid="35" name="Fresh Produce Sus" tags="" position="725,1325" size="100,100">You speed-walk to the cucumbers because you know Spot loves them. As you walk, you 
-notice that the bananas are all perfectly ripe. Not only that but all the fruits look ready to eat! You havn&#39;t been to the store often, but this feels off. Spot is not here.
+notice that the bananas are all perfectly ripe. Not only that, but all the fruits look ready to eat! You havn&#39;t been to the store often, but this feels off. Spot is not here.
 
-[[Go back-&gt;Aisles]]</tw-passagedata><tw-passagedata pid="36" name="Frozen Aisle Normal" tags="" position="400,1225" size="100,100">You doubt Spot would be in such a cold location, but you take a look anyway. You get distracted with the frozen pizzas, but then refocus on your goal.
+[[Go back-&gt;Aisles]]</tw-passagedata><tw-passagedata pid="36" name="Frozen Aisle Normal" tags="" position="400,1225" size="100,100">You doubt Spot would be in such a cold location, but you take a look anyway. You get distracted by the frozen pizzas, but then refocus on your goal.
 
 [[Go back-&gt;Aisles]]</tw-passagedata><tw-passagedata pid="37" name="Snack Section Normal" tags="" position="425,1125" size="100,100">You scour the shelves and finally find your favorite chips on the bottom shelf. You contemplate buying it, but then notice a trail of chips on the floor. It leads to a bag with a dog-sized bite out of it. Spot was here! 
 
-[[Go back-&gt;Aisles]]</tw-passagedata><tw-passagedata pid="38" name="For Pets Aisle End" tags="" position="450,1400" size="100,100">The pets aisle! Of course! And as you expected, you see Spot wagging his tail and playing with a buch of toys. &quot;There you are Spot! You had me so worried. I got to get you [[home!-&gt;Ending 2]]&quot;</tw-passagedata><tw-passagedata pid="39" name="Bread Aisle Sus" tags="" position="650,1425" size="100,100">There are all kinds of bread here, some that you&#39;ve never heard of before. You don&#39;t see spot right away, but you are persistant and look behind the loaves. As your sift through the bread, deafening screeching noises come from the plastic that holds the bread. Ouch! You pick up a loaf and toss it around---no more screeching. Spot was not here.
+[[Go back-&gt;Aisles]]</tw-passagedata><tw-passagedata pid="38" name="For Pets Aisle End" tags="" position="450,1400" size="100,100">The pets aisle! Of course! And as you expected, you see Spot wagging his tail and playing with a buch of toys. &quot;There you are, Spot! You had me so worried. I got to get you [[home!-&gt;Ending 2]]&quot;</tw-passagedata><tw-passagedata pid="39" name="Bread Aisle Sus" tags="" position="650,1425" size="100,100">There are all kinds of bread here, some that you&#39;ve never heard of before. You don&#39;t see spot right away, but you are persistant and look behind the loaves. As your sift through the bread, deafening screeching noises come from the plastic that holds the bread. Ouch! You pick up a loaf and toss it around---no more screeching. Spot was not here.
 
 [[Go back-&gt;Aisles]]</tw-passagedata><tw-passagedata pid="40" name="Ending 2" tags="" position="450,1525" size="100,100">You take Spot home and are greeted by an upset Mom. &quot;You are grounded! You know you are supposed to be doing homework at this time!&quot;
 
 You go to your room, relieved you found Spot. Although... something felt off about today, something weird is going on, but you just can&#39;t put your finger on it.
 
-[[//**You found Spot!**//-&gt;The End]]</tw-passagedata><tw-passagedata pid="41" name="Wine Aisle End" tags="" position="325,1400" size="100,100">Kids aren&#39;t allowed in the wine aisle, but you need to be sure Spot isn&#39;t here. You walk in and look to the shelves. As you take a closer look, you notice that all the glasses look 2-dimentional. You reach your hand out to feel one, but your fingers hit an [[invisible barrier-&gt;Ending 3]].
+[[//**You found Spot!**//-&gt;The End]]</tw-passagedata><tw-passagedata pid="41" name="Wine Aisle End" tags="" position="325,1400" size="100,100">Kids aren&#39;t allowed in the wine aisle, but you need to be sure Spot isn&#39;t here. You walk in and look at the shelves. As you take a closer look, you notice that all the glasses look 2-dimentional. You reach your hand out to feel one, but your fingers hit an [[invisible barrier-&gt;Ending 3]].
 </tw-passagedata><tw-passagedata pid="42" name="Ending 3" tags="" position="325,1525" size="100,100">You awaken with a gasp. You hear a familiar voice.
 
 &quot;Dang it! I didn&#39;t think a kid would actually go in there!&quot; 
@@ -299,9 +299,9 @@ You suddenly remember everything that is going on. You were testing a simulation
 
 [[&quot;I figured it out!&quot;-&gt;Ending 4]]</tw-passagedata><tw-passagedata pid="44" name="Ending 4" tags="" position="1350,2400" size="100,100">You awaken with a gasp. You look around your lab and remember what happened. You are developing a way to put people in simulations and were testing it out. The only way to escape is to realize you are in a simulation.
 
-&quot;That was WAY too dangerous,&quot; you thought to yourself. Luckily only a few hours passed while you were in the simulation.
+&quot;That was WAY too dangerous,&quot; you thought to yourself. Luckily, only a few hours passed while you were in the simulation.
 
-[[//**You escaped the simulation**//-&gt;The End]]</tw-passagedata><tw-passagedata pid="45" name="Waiter Tall 1" tags="" position="1850,2025" size="100,100">&quot;I&#39;m sorry to hear that. I have a dog myself and would be worried sick if he was missing. I haven&#39;t seen a dog here, but will let you know if I do!&quot;
+[[//**You escaped the simulation**//-&gt;The End]]</tw-passagedata><tw-passagedata pid="45" name="Waiter Tall 1" tags="" position="1850,2025" size="100,100">&quot;I&#39;m sorry to hear that. I have a dog myself and would be worried sick if he was missing. I haven&#39;t seen a dog here, but I will let you know if I do!&quot;
 
 [[Say &quot;Okay!&quot; and go on your way.-&gt;Restaurant]]
 
@@ -310,7 +310,7 @@ You suddenly remember everything that is going on. You were testing a simulation
 [[How do you know my name?-&gt;WW11]]
 [[How do you know my dog&#39;s name?-&gt;WW12]]</tw-passagedata><tw-passagedata pid="47" name="Waiter End" tags="" position="2300,2025" size="100,100">&quot;Yes, of course, please follow me.&quot; They lead you out the back door.
 
-&quot;Were are we going? I was just going to ask--
+&quot; Where are we going? I was just going to ask--
 
 &quot;Shhhhhh! [[Hurry!-&gt;Ending 6]]&quot;
 </tw-passagedata><tw-passagedata pid="48" name="Waiter Tall 2" tags="" position="1850,2150" size="100,100">His smile faded and looked at you confused. &quot;Yes I&#39;m sure. I said I&#39;d let you know if I saw him.&quot;
@@ -333,9 +333,9 @@ You don&#39;t know what to say, you //have// noticed that weird things have happ
 
 &quot;I think we are in a [[sim--&gt;Ending 6 cont.]]&quot;</tw-passagedata><tw-passagedata pid="55" name="Ending 6 cont." tags="" position="2300,2275" size="100,100">You wake up with a gasp. You are sitting on the couch next to your friend.
 
-&quot;We did it!&quot; you friend exclaimes! I told you we could beat it!
+&quot;We did it!&quot; your friend exclaims! I told you we could beat it!
 
-You take the nerual controller off your head. &quot;I don&#39;t like these games dude. They feel too real.&quot;
+You take the neural controller off your head. &quot;I don&#39;t like these games dude. They feel too real.&quot;
 
 &quot;Ah, don&#39;t be so boring, it&#39;s all safe, it&#39;ll wake you up after an hour automatically.&quot;
 
@@ -352,7 +352,7 @@ You reach a dead end. You heard a noise to your left and realize it&#39;s just a
 [[back to park-&gt;Park]]
 ]
 (else:)[
-You reach a fork in the path. You are getting worried, maybe you should go back. Something feels off.
+You reach a fork in the path. You are getting worried; maybe you should go back. Something feels off.
 
 [[Turn left-&gt;Turn Bushes 2]]
 [[Turn right-&gt;Turn Bushes 2]]
@@ -428,7 +428,7 @@ You have to leave.
 [[&quot;Oh, okay.&quot;-&gt;Hospital]]]
 
 (else:)[
-You curiosity gets the best of you and you form a plan to sneak in to figure out what is going on.
+Your curiosity gets the best of you, and you form a plan to sneak in to figure out what is going on.
 
 &quot;Okay, I&#39;ll leave,&quot; you tell the receptionist as you walk away.
 
@@ -445,7 +445,7 @@ You jump in fright and turn your head towards the man.
 
 You awaken with a gasp. You look around your lab and remember what happened. You are developing a way to put people in simulations and were testing it out. The only way to escape is to realize you are in a simulation.
 
-&quot;That was WAY too dangerous,&quot; you thought to yourself. Luckily only a few hours passed while you were in the simulation.
+&quot;That was WAY too dangerous,&quot; you thought to yourself. Luckily, only a few hours passed while you were in the simulation.
 
 [[//**You escaped the simulation**//-&gt;The End]]</tw-passagedata><tw-passagedata pid="73" name="Concrete 2" tags="" position="875,725" size="100,100">(if: visits &lt;=1)[(set: $sus to $sus + 2)]
 You take a quick look around.
@@ -468,7 +468,7 @@ You decide to walk along the concrete to find out where it ends. You lightly dra
 ]
 </tw-passagedata><tw-passagedata pid="74" name="Ending 10" tags="" position="725,675" size="100,100">After a long walk, you reach the corner. You can barely see the rest of town, but you know you can make it back. You round the corner and hit your head on something. Ouch. You look up, down, left, and right but dont see anything in the way. You try to keep walking, but hit something again. It&#39;s an [[invisable wall-&gt; Ending 10 cont.]].</tw-passagedata><tw-passagedata pid="75" name=" Ending 10 cont." tags="" position="725,750" size="100,100">You wake up with a gasp. You look around your lab and remember what happened. You are developing a way to put people in simulations and were testing it out. You found a contridiction in the code, which automatically woke you up.
 
-&quot;That was WAY too dangerous,&quot; you thought to yourself. Luckily only a few hours passed while you were in the simulation.
+&quot;That was WAY too dangerous,&quot; you thought to yourself. Luckily, only a few hours passed while you were in the simulation.
 
 [[//**You escaped the simulation**//-&gt;The End]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
